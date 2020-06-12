@@ -1,0 +1,72 @@
+$color: lightblue;
+$display: inline-block;
+$border: solid black;
+
+body {
+  text-align: center;
+}
+
+.column {
+  display: $display;
+  width: 50%;
+  max-width: 300px;
+
+  ul {
+    list-style: inside;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+#stroke-table {
+  border: 5px $border;
+  margin: auto;
+}
+
+.im-order {
+  font-size: 24pt;
+}
+
+#med-relay-order-bg {
+  background-image: url("pool_bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+tr {
+  height: 128px;
+}
+
+td {
+  border: 1px solid white;
+  background-color: $color;
+  width: 256px;
+}
+
+img {
+  max-width: 100%;
+}
+
+%med-relay-order {
+  margin: 10px;
+  border-radius: 25px;
+  display: $display;
+  border: 2px $border;
+}
+
+#med-relay-order-title {
+  @extend %med-relay-order;
+  background-color: $color;
+  padding: 20px;
+}
+
+#med-relay-order-footer {
+  @extend %med-relay-order;
+  background-color: white;
+  padding: 0 10px;
+}
